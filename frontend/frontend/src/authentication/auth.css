@@ -1,0 +1,223 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-box {
+
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 10px;
+
+  width: 320px;
+
+  text-align: center;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+}
+
+.auth-box h2 {
+  margin-bottom: 20px;
+}
+
+.auth-box input {
+
+  width: 100%;
+
+  padding: 10px;
+
+  margin: 10px 0;
+
+  border-radius: 5px;
+
+  border: 1px solid #ccc;
+
+}
+
+.auth-box button {
+
+  width: 100%;
+
+  padding: 10px;
+
+  margin-top: 10px;
+
+  border: none;
+
+  background: #2a5298;
+
+  color: white;
+
+  font-size: 16px;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+}
+
+.auth-box button:hover {
+
+  background: #1e3c72;
+
+}
+
+.auth-box p {
+
+  margin-top: 15px;
+
+}
+
+.auth-box a {
+
+  color: #2a5298;
+
+  text-decoration: none;
+
+}
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Background */
+
+.login-container{
+
+  height:100vh;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+}
+
+/* Card */
+
+.login-card{
+
+  width:360px;
+
+  background:white;
+
+  padding:40px;
+
+  border-radius:12px;
+
+  box-shadow:0 15px 40px rgba(0,0,0,0.3);
+
+  text-align:center;
+}
+
+/* Title */
+
+.logo{
+
+  margin-bottom:5px;
+
+  color:#203a43;
+}
+
+.subtitle{
+
+  font-size:14px;
+
+  color:gray;
+
+  margin-bottom:25px;
+}
+
+/* Inputs */
+
+.input-group{
+
+  margin-bottom:18px;
+}
+
+.input-group input{
+
+  width:100%;
+
+  padding:12px;
+
+  border-radius:6px;
+
+  border:1px solid #ccc;
+
+  font-size:14px;
+
+  transition:0.3s;
+}
+
+.input-group input:focus{
+
+  outline:none;
+
+  border-color:#2c5364;
+
+  box-shadow:0 0 5px rgba(44,83,100,0.4);
+}
+
+/* Button */
+
+.login-btn{
+
+  width:100%;
+
+  padding:12px;
+
+  border:none;
+
+  border-radius:6px;
+
+  background:#2c5364;
+
+  color:white;
+
+  font-size:16px;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.login-btn:hover{
+
+  background:#203a43;
+}
+
+/* Bottom text */
+
+.bottom-text{
+
+  margin-top:20px;
+
+  font-size:14px;
+}
+
+.bottom-text a{
+
+  color:#2c5364;
+
+  text-decoration:none;
+
+  font-weight:bold;
+}

@@ -5,7 +5,6 @@ body {
   color: white;
 }
 
-/* MAIN CONTAINER */
 
 .container {
   display: flex;
@@ -19,7 +18,6 @@ body {
   margin-top: 20px;
 }
 
-/* FACE BUTTONS */
 
 .face-selector button{
   margin: 5px;
@@ -33,8 +31,6 @@ body {
 .face-selector button:hover{
   transform: scale(1.05);
 }
-
-/* INPUT GRID */
 
 .grid{
   display: grid;
@@ -52,7 +48,6 @@ body {
   font-weight: bold;
 }
 
-/* BUTTONS */
 
 .button-group{
   margin-top: 10px;
@@ -86,8 +81,6 @@ body {
   color: black;
 }
 
-/* 2D CUBE */
-
 .cube-2d{
   position: absolute;
   right: 40px;
@@ -98,8 +91,6 @@ body {
   align-items: center;
 }
 
-/* each face */
-
 .face{
   display: grid;
   grid-template-columns: repeat(3,28px);
@@ -107,15 +98,12 @@ body {
   gap: 2px;
 }
 
-/* middle row */
 
 .middle-row{
   display: flex;
   gap: 6px;
   margin: 6px 0;
 }
-
-/* cube squares */
 
 .square{
   width: 28px;

@@ -60,25 +60,19 @@ app.delete("/reset_faces", (req, res) => {
 
 app.post("/solve", (req, res) => {
     try {
-        // 1. Validate all faces are captured
+        
         const missing = ["U", "R", "F", "D", "L", "B"].filter(f => !currCube[f]);
         if (missing.length > 0) {
             return res.status(400).json({ error: `Missing faces: ${missing.join(", ")}` });
         }
 
-        // 2. Build color-letter → face-letter map using each face's center (index 4)
-        //    e.g. center of U face is 'W' → W maps to U
-        //         center of R face is 'R' → R maps to R
-        //         center of F face is 'G' → G maps to F  etc.
         const colorToFace = {};
         for (const face of ["U", "R", "F", "D", "L", "B"]) {
-            const centerColor = currCube[face][4]; // center is always index 4
+            const centerColor = currCube[face][4]; 
             colorToFace[centerColor] = face;
         }
         console.log("Color→Face map:", colorToFace);
-        // e.g. { W:'U', R:'R', G:'F', Y:'D', O:'L', B:'B' }
-
-        // 3. Remap all 54 cells from color letters to face letters
+        
         const normalized = {};
         for (const face of ["U", "R", "F", "D", "L", "B"]) {
             normalized[face] = currCube[face].map(color => {
@@ -88,7 +82,6 @@ app.post("/solve", (req, res) => {
             });
         }
 
-        // 4. Build the 54-character string (order: U R F D L B)
         const cubeString = ["U", "R", "F", "D", "L", "B"]
             .map(face => normalized[face].join(""))
             .join("");
@@ -97,12 +90,10 @@ app.post("/solve", (req, res) => {
 
         const cube = Cube.fromString(cubeString);
 
-        // 5. Early exit if already solved
         if (cube.isSolved()) {
             return res.json({ success: true, solution: "Already solved!", moveCount: 0 });
         }
 
-        // 6. Solve
         const solution = cube.solve();
 
         res.json({
